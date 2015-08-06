@@ -5,7 +5,10 @@ require "minitest/rails"
 require "minitest/rails/capybara"
 require "minitest/reporters"
 
-Minitest::Reporters.use!
+Minitest::Reporters.use! [
+  Minitest::Reporters::ProgressReporter.new,
+  Minitest::Reporters::JUnitReporter.new(ENV["CIRCLE_TEST_REPORTS"] || "test/reports")
+]
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
