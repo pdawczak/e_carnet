@@ -10,6 +10,17 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require bootstrap
+ *= require fontawesome
+ *= require font-awesome-animation
+ *= require progress
+ * require_tree .
  *= require_self
  */
+
+body { padding-top: 70px; }
+
+.navbar-brand span {
+  display: inline-block;
+  width: 25px;
+}
