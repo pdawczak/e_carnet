@@ -49,3 +49,12 @@ group :test do
   gem "minitest-reporters"
   gem "launchy"
 end
+
+gem "autoprefixer-rails"
+source "https://rails-assets.org" do
+  gem "rails-assets-bootstrap"
+  gem "rails-assets-fontawesome"
+  gem "rails-assets-font-awesome-animation"
+end
+
+gem "nprogress-rails"

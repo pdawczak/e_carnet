@@ -13,4 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
+//= require nprogress
+//= require nprogress-turbolinks
 //= require_tree .
+
+NProgress.configure({
+    parent: '.progressbar-attach',
+    template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
+});

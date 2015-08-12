@@ -1,0 +1,36 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid progressbar-attach">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <span class="spiner-placeholder"></span>
+        ECarnet
+      <% end %>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <%= link_to root_path do %>
+            <i class="fa fa-dashboard"></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to faq_path do %>
+            <i class="fa fa-question"></i>
+          <% end %>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
