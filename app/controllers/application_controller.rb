@@ -4,9 +4,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   attr_reader :app
-  helper_method :app
+  helper_method :app, :current_user
 
   before_filter :setup_app
+
+  def current_user
+    app.current_user
+  end
 
   private
 
