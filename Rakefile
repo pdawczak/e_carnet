@@ -8,3 +8,7 @@ Rails.application.load_tasks
 Rails::TestTask.new("test:features" => "test:prepare") do |t|
   t.pattern = "test/features/**/*_test.rb"
 end
+
+Rails::TestTask.new("test:models" => "test:prepare") do |t|
+  t.pattern = "test/models/**/*_test.rb"
+end
