@@ -9,6 +9,10 @@ Rails::TestTask.new("test:features" => "test:prepare") do |t|
   t.pattern = "test/features/**/*_test.rb"
 end
 
+Rails::TestTask.new("test:app" => "test:prepare") do |t|
+  t.pattern = "test/e_carnet_app/**/*_test.rb"
+end
+
 Rails::TestTask.new("test:models" => "test:prepare") do |t|
   t.pattern = "test/models/**/*_test.rb"
 end
