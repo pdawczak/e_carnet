@@ -1,8 +1,8 @@
 class ECarnetApp
-  attr_reader :user
+  attr_reader :current_user
 
   def initialize(user)
-    @user = user
+    @current_user = user
   end
 
   class << self
