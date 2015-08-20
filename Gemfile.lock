@@ -63,6 +63,9 @@ GEM
     coffee-script-source (1.9.1.1)
     columnize (0.9.0)
     debug_inspector (0.0.2)
+    disposable (0.1.9)
+      representable (>= 2.2.3, <= 2.3.0)
+      uber
     erubis (2.7.0)
     execjs (2.5.2)
     globalid (0.3.5)
@@ -144,6 +147,11 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    reform (2.0.3)
+      disposable (~> 0.1.9)
+      uber (~> 0.0.11)
+    representable (2.3.0)
+      uber (~> 0.0.7)
     ruby-progressbar (1.7.5)
     sass (3.4.16)
     sass-rails (5.0.3)
@@ -169,6 +177,7 @@ GEM
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    uber (0.0.13)
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
@@ -199,6 +208,7 @@ DEPENDENCIES
   rails-assets-bootstrap!
   rails-assets-font-awesome-animation!
   rails-assets-fontawesome!
+  reform
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

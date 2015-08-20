@@ -58,3 +58,4 @@ source "https://rails-assets.org" do
 end
 
 gem "nprogress-rails"
+gem "reform"
