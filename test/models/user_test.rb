@@ -6,6 +6,6 @@ class UserTest < ActiveSupport::TestCase
     assert_kind_of User, user
 
     guest = User.find_current_user_by_id(nil)
-    assert_kind_of ECarnetApp::Guest, guest
+    assert_kind_of ECarnetAppModule::UsersModule::Guest, guest
   end
 end

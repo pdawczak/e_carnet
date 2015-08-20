@@ -1,2 +1,0 @@
-class ECarnetApp::Guest
-end
