@@ -60,3 +60,4 @@ end
 
 gem "nprogress-rails"
 gem "reform"
+gem "simple_form"
