@@ -1,0 +1,15 @@
+<h1>Users::Register::Client#new</h1>
+<p>Find me in app/views/users/register/client/new.html.erb</p>
+
+<%= form_for @form, as: :user, url: register_new_client_path, html: { id: "new-client" } do |f| %>
+ <%= f.label :email %>
+ <%= f.text_field :email %>
+
+ <%= f.label :password %>
+ <%= f.password_field :password %>
+
+ <%= f.label :password_confirmation %>
+ <%= f.password_field :password_confirmation %>
+
+ <%= f.submit "Register" %>
+<% end %>

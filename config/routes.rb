@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get "register/client",  to: "users/register/client#new", as: :register_new_client
+  post "register/client", to: "users/register/client#create"
+
   root "static#index"
   get "faq", to: "static#faq"
 
