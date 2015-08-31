@@ -7,4 +7,6 @@
 #
 
 joe:
-  {}
+  email: joe@tester.com
+  type: client
+  password_digest: <%= BCrypt::Password.create("test123") %>
