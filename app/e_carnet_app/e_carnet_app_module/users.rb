@@ -5,7 +5,7 @@ module ECarnetAppModule
     end
 
     def new_client_form
-      UsersModule::UserForm.new(User.new)
+      UsersModule::UserForm.new(User.new_client)
     end
   end
 end
