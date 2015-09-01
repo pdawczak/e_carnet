@@ -38,9 +38,9 @@ class UsersFormTest < Minitest::Test
 
     form = build_form
 
-    refute form.validate(user_params({ "email"                 => "test",
-                                       "password"              => "zxc",
-                                       "password_confirmation" => "qwe"}))
+    refute form.validate(user_params("email"                 => "test",
+                                     "password"              => "zxc",
+                                     "password_confirmation" => "qwe"))
 
     assert include_error?(form, :email),    "Invalid Email"
     assert include_error?(form, :password), "Password should be confirmed properly"
