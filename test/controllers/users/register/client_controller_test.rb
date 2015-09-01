@@ -7,10 +7,12 @@ class Users::Register::ClientControllerTest < ActionController::TestCase
   end
 
   def test_create
+    user_params = { email:                 "sample_email@test.com",
+                    password:              "SamplePassword",
+                    password_confirmation: "SamplePassword" }
+
     assert_difference "User.clients.count" do
-      post :create, user: { email:                 "sample_email@test.com",
-                      password:              "SamplePassword",
-                      password_confirmation: "SamplePassword" }
+      post :create, user: user_params
     end
   end
 end
