@@ -9,4 +9,4 @@
 joe:
   email: joe@tester.com
   type: client
-  password_digest: <%= BCrypt::Password.create("test123") %>
+  password_digest: <%= BCrypt::Password.create(UserAuth::COMMON_PASSWORD) %>
