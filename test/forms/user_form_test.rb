@@ -6,13 +6,13 @@ class UsersFormTest < Minitest::Test
   end
 
   def user_params(params = {})
-    { "email"                 => params.fetch("email", ""),
-      "password"              => params.fetch("password", ""),
-      "password_confirmation" => params.fetch("password_confirmation", "") }
+    { "email"                 => "",
+      "password"              => "",
+      "password_confirmation" => "" }.merge(params)
   end
 
   def build_form
-    ECarnetAppModule::UsersModule::UserForm.new(user)
+    UserForm.new(user)
   end
 
   def include_error?(form, field)

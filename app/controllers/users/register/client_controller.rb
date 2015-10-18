@@ -1,26 +1,26 @@
 class Users::Register::ClientController < ApplicationController
   def new
-    @form = app.users.new_client_form
+    @form = form_for_client
   end
 
   def create
-    @form = app.users.new_client_form
-    if @form.validate(user_params)
+    @form = form_for_client
+
+    if @form.validate(params[:user])
       @form.save
       redirect_to root_url, notice: notice_for(@form.model)
     else
-      render "new"
+      render :new
     end
   end
 
   private
 
-  def notice_for(user)
-    "Welcome #{user.email}. You've been registered correctly!"
+  def form_for_client
+    UserForm.new(User.new_client)
   end
 
-  def user_params
-    params.require(:user)
-          .permit(:email, :password, :password_confirmation)
+  def notice_for(user)
+    "Welcome #{user.email}. You've been registered correctly!"
   end
 end
