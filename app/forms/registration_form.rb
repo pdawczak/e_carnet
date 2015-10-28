@@ -1,4 +1,4 @@
-class UserForm < Reform::Form
+class RegistrationForm < Reform::Form
   property :email
   property :password
   property :password_confirmation, virtual: true

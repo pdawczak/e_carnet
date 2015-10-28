@@ -1,10 +1,6 @@
 require "test_helper"
 
-class UsersFormTest < Minitest::Test
-  def user
-    @user ||= User.new
-  end
-
+class RegistrationFormTest < Minitest::Test
   def user_params(params = {})
     { "email"                 => "",
       "password"              => "",
@@ -12,7 +8,7 @@ class UsersFormTest < Minitest::Test
   end
 
   def build_form
-    UserForm.new(user)
+    RegistrationForm.new(User.new)
   end
 
   def include_error?(form, field)

@@ -17,7 +17,7 @@ class Users::Register::ClientController < ApplicationController
   private
 
   def form_for_client
-    UserForm.new(User.new_client)
+    RegistrationForm.new(User.new_client)
   end
 
   def notice_for(user)
