@@ -1,10 +1,13 @@
 class RegistrationForm < Reform::Form
+  EMAIL_FORMAT_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+
   property :email
   property :password
   property :password_confirmation, virtual: true
 
-  validates :email, format: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
-    presence: true
+  validates :email, presence: true,
+                    format:   { with:        EMAIL_FORMAT_REGEX,
+                                allow_blank: true }
   validate :passwords_valid
 
   private

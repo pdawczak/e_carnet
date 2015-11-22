@@ -2,3 +2,7 @@ machine:
   ruby:
     version:
       2.1.1
+
+test:
+  post:
+    - bundle exec rspec --format RspecJunitFormatter --out <%= ENV["CIRCLE_TEST_REPORTS"] %>/rspec.xml
