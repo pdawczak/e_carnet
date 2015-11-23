@@ -1,7 +1,4 @@
 require "rails_helper"
-# require "spec_helper"
-# require "reform"
-# require_relative "../../app/forms/registration_form"
 
 RSpec.describe RegistrationForm do
   describe "properties" do
