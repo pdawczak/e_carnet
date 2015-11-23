@@ -9,7 +9,7 @@ RSpec.describe RegistrationForm do
     it { is_expected.to respond_to :password_confirmation }
   end
 
-  context "validation" do
+  describe "validation" do
     context "email" do
       it "is valid" do
         form = RegistrationForm.new(OpenStruct.new)
