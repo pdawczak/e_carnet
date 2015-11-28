@@ -42,12 +42,13 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem "minitest-rails"
+  gem "rspec-rails", "~> 3.0"
+  gem "factory_girl_rails"
+  gem "faker"
 end
 
 group :test do
-  gem "minitest-rails-capybara"
-  gem "minitest-reporters"
+  gem "capybara"
   gem "launchy"
 end
 
@@ -61,3 +62,4 @@ end
 gem "nprogress-rails"
 gem "reform"
 gem "simple_form"
+gem "rspec_junit_formatter"
