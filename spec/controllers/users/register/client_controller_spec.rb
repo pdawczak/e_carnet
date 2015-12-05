@@ -11,6 +11,16 @@ RSpec.describe Users::Register::ClientController, type: :controller do
   end
 
   describe "POST #create" do
+    context "with invalid params" do
+      it "creates new client" do
+        user_params = {}
+
+        post :create, user: user_params
+
+        expect(response).to render_template(:new)
+      end
+    end
+
     context "with valid params" do
       it "creates new client" do
         user_params = attributes_for(:client, password: "test123",
