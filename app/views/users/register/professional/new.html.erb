@@ -1,0 +1,11 @@
+<h1>Registration <small>professional account</small></h1>
+
+<%= simple_form_for @form, as: :user, url: register_new_professional_path, html: { id: "new-professional" } do |f| %>
+ <%= f.input :email, required: false %>
+
+ <%= f.input :password, required: false %>
+
+ <%= f.input :password_confirmation, required: false %>
+
+ <%= f.button :submit, "Register", class: "btn-primary" %>
+<% end %>

@@ -7,5 +7,9 @@ FactoryGirl.define do
     factory :client do
       type :client
     end
+
+    factory :professional do
+      type :professional
+    end
   end
 end
