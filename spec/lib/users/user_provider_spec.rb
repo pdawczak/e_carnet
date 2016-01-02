@@ -1,5 +1,4 @@
 require "rails_helper"
-# require_relative "../../../app/lib/users/user_provider"
 
 RSpec.describe Users::UserProvider do
   describe "#find_current_user_by_id" do
